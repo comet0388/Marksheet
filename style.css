@@ -21,7 +21,7 @@ padding: 0px;
     to right,
     rgba(109, 164, 109, 0.15) 0px,      /* light green */
     rgba(255, 255, 255, 0.0) 150px,     /* transparent band */
-    rgba(255, 165, 0, 0.15) 250px       /* light orange */
+    rgba(255, 165, 0, 0.15) 250px     /* light orange */
   );
   background-color: transparent; 
   z-index: 0;
