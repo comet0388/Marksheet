@@ -1,0 +1,236 @@
+*{
+ margin: 0px;
+padding: 0px;
+
+}
+  
+  body {
+     font-family: 'Times New Roman', serif;
+      background: #f8f8f8;
+    }
+
+   .grade-sheet {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  border: 8px double #dc143c;
+  padding: 25px 25px 0px 25px;
+  box-sizing: border-box;
+  position: relative;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(109, 164, 109, 0.15) 0px,      /* light green */
+    rgba(255, 255, 255, 0.0) 150px,     /* transparent band */
+    rgba(255, 165, 0, 0.15) 250px       /* light orange */
+  );
+  background-color: transparent; /* keep transparency */
+  z-index: 0;
+}
+
+    .watermark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 250px;
+      height: 250px;
+      transform: translate(-50%, -50%);
+      opacity: 0.08;
+      z-index: 0;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 1px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-left {
+      position: absolute;
+      left: 3px;
+      top: 18px;
+      width: 80px;
+    }
+
+    .logo-right {
+      position: absolute;
+      right: 3px;
+      top: 18px;
+      width: 80px;
+    }
+
+    .college-name {
+      font-size: 22px;
+      font-weight: bold;
+      color: rgb(19, 0, 85);
+      margin: 10px 0;
+    }
+
+    .autonomous {
+        margin-top: -10px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .approvals {
+        font-family: serif;
+      font-size: 17px;
+      color: rgb(46, 184, 46);
+      margin: 5px 0;
+      line-height: 1.4;
+      font-weight: bold;
+    }
+
+    .degree-examinations {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: bold;
+      color: rgb(19, 0, 85);
+      margin-top: 1px;
+    }
+
+    .grade-sheet-title {
+      font-size: 21px;
+      font-family: serif;
+      font-weight: bold;
+      color: #dc143c;
+    }
+
+    .info-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 0px -25px 10px -25px; /* Negative margin cancels out the grade-sheet padding */
+      padding: 0 25px;   /* Add inner padding back */
+      position: relative;
+      z-index: 1;
+      background-color: rgb(242, 226, 232);
+      width: calc(100% + 50px); /* Full width including padding area */
+      box-sizing: border-box;
+      opacity: 1.0;
+    }
+
+    .student-info {
+      flex: 1;
+    }
+
+    .student-photo {
+      width: 120px;
+      height: 150px;
+      border: 1px solid #00000000;
+    }
+
+    .info-row {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    .label {
+      font-weight: bold;
+      display: inline-block;
+      width: 160px;
+    }
+
+/* ---------- TABLE ---------- */
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  border: 1px solid #000; /* Outer border only */
+}
+
+/* Header cells - keep full borders */
+.grades-table thead th {
+  border: 1px solid #000;
+  padding: 6px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: transparent;
+  font-weight: 550;
+  font-size: 12px;
+}
+
+/* Body cells - remove inner horizontal borders but keep verticals */
+.grades-table tbody td {
+  border-top: none;   /* Remove horizontal line between rows */
+  border-bottom: none; /* Remove horizontal line between rows */
+  border-left: 1px solid #000;  /* Keep vertical lines */
+  border-right: 1px solid #000; /* Keep vertical lines */
+  padding: 6px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight:400;
+}
+
+/* Keep bottom border on the last row to close the table */
+.grades-table tbody tr:last-child td {
+  border-bottom: 1px solid #000;
+}
+
+/* Align course title to the left except for End of Statement */
+.grades-table td:nth-child(3):not(.end-statement) {
+  text-align: left;
+}
+
+/* Ensure the End of Statement cell centers */
+.grades-table td.end-statement {
+  text-align: center !important;
+  vertical-align: middle;
+
+}
+
+
+    .summary {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+      font-weight: bold;
+      font-size: 12px;
+      color: #dc143c;
+      font-family: sans-serif;
+    }
+
+    .date {
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .footer{
+        position: absolute;
+        bottom: 0;
+        justify-content: center;
+        width: 100%;
+        margin-left: -25px;
+        padding-right: 20px;
+
+    }
+
+    #ft {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 180px;
+        background-color: white;
+        padding: 0; /* Ensure no padding */
+    }
+
+     .seal {
+      width: 130px;
+      right: 100px; 
+    } 
+
+    .signature-section {
+      text-align: center;
+    }
+
+    .signature {
+      width: 120px;
+      display: block;
+      margin: 0 auto 5px auto;
+    }
+
+    .signature-title {
+      font-size: 12px;
+      font-weight: bold;
+    }
