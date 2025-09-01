@@ -23,7 +23,7 @@ padding: 0px;
     rgba(255, 255, 255, 0.0) 150px,     /* transparent band */
     rgba(255, 165, 0, 0.15) 250px       /* light orange */
   );
-  background-color: transparent; /* keep transparency */
+  background-color: transparent; 
   z-index: 0;
 }
 
@@ -100,12 +100,12 @@ padding: 0px;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin: 0px -25px 10px -25px; /* Negative margin cancels out the grade-sheet padding */
-      padding: 0 25px;   /* Add inner padding back */
+      margin: 0px -25px 10px -25px;
+      padding: 0 25px;  
       position: relative;
       z-index: 1;
       background-color: rgb(242, 226, 232);
-      width: calc(100% + 50px); /* Full width including padding area */
+      width: calc(100% + 50px); 
       box-sizing: border-box;
       opacity: 1.0;
     }
@@ -139,10 +139,10 @@ padding: 0px;
   z-index: 1;
   position: relative;
   text-align: center;
-  border: 1px solid #000; /* Outer border only */
+  border: 1px solid #000; 
 }
 
-/* Header cells - keep full borders */
+
 .grades-table thead th {
   border: 1px solid #000;
   padding: 6px;
@@ -152,28 +152,26 @@ padding: 0px;
   font-size: 12px;
 }
 
-/* Body cells - remove inner horizontal borders but keep verticals */
 .grades-table tbody td {
-  border-top: none;   /* Remove horizontal line between rows */
-  border-bottom: none; /* Remove horizontal line between rows */
-  border-left: 1px solid #000;  /* Keep vertical lines */
-  border-right: 1px solid #000; /* Keep vertical lines */
+  border-top: none; 
+  border-bottom: none; 
+  border-left: 1px solid #000;  
+  border-right: 1px solid #000;
   padding: 6px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight:400;
 }
 
-/* Keep bottom border on the last row to close the table */
+
 .grades-table tbody tr:last-child td {
   border-bottom: 1px solid #000;
 }
 
-/* Align course title to the left except for End of Statement */
 .grades-table td:nth-child(3):not(.end-statement) {
   text-align: left;
 }
 
-/* Ensure the End of Statement cell centers */
+
 .grades-table td.end-statement {
   text-align: center !important;
   vertical-align: middle;
@@ -212,7 +210,7 @@ padding: 0px;
         align-items: center;
         margin-top: 180px;
         background-color: white;
-        padding: 0; /* Ensure no padding */
+        padding: 0; 
     }
 
      .seal {
@@ -234,3 +232,4 @@ padding: 0px;
       font-size: 12px;
       font-weight: bold;
     }
+    
